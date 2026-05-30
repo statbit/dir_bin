@@ -125,13 +125,13 @@ _path_manager_chpwd() {
         _add_current_dir_bin_to_path
 
         # Add current directory's aliases if they exist
-        _add_current_dir_aliases
+        # _add_current_dir_aliases
 
         _unset_previous_bindings "$previous_dir"
         _set_current_bindings "$current_dir"
     else
         # If we're outside $HOME or in dir_bin directory, just clean up any existing dir_bin entries
-        _remove_dir_bins_from_path
+        # _remove_dir_bins_from_path
     fi
 }
 

@@ -1,0 +1,17 @@
+[package]
+name = "dir_bin"
+version = "0.1.0"
+edition = "2021"
+description = "Fast per-directory PATH and keybinding manager (single binary, shell-init style)"
+license = "MIT"
+
+[[bin]]
+name = "dir_bin"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
+codegen-units = 1
+panic = "abort"
